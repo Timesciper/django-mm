@@ -1,2 +1,2 @@
 # django-mm
-trying to create some mmr based mm
+trying to create some mmr basic mm
