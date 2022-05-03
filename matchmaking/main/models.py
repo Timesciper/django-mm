@@ -1,5 +1,5 @@
 from django.db import models
-from matchmaking.game_systems.models import AbstractGameSystem
+from game_systems.models import AbstractGameSystem
 from matchmaking.settings import DEFAULT_MMR_STARTPOINT, DEFAULT_MAX_MMR_DIFF
 
 
@@ -19,6 +19,7 @@ class MMR(models.Model):
     # maybe default system - like default?
     game_system = models.ForeignKey(AbstractGameSystem, on_delete=models.CASCADE, verbose_name='Game system related to mmr')
     value = models.IntegerField(default=DEFAULT_MMR_STARTPOINT, verbose_name='MMR value')
+
 
 class Matchmaking(models.Model):
     # here we should define baseline for finding opponent
