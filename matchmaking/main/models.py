@@ -7,8 +7,7 @@ class AbstractPlayer(models.Model):
     # no login or email here - we can extend it with custom player class later
     # abstract player can have multiple mmr's which depend on system
 
-
-    def get_mmr(self, game_system=''):
+    def get_mmr(self, game_system):
         game = AbstractGameSystem.objects.get(name=game_system)
         return MMR.objects.filter(game_system=game).get(player=self)
 
