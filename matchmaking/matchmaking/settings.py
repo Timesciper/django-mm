@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'game_systems',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +124,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Defaul setting for MMR itself
+DEFAULT_MMR_STARTPOINT = 1000  # int
+DEFAULT_MAX_MMR_DIFF = 200
